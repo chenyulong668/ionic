@@ -1,0 +1,49 @@
+<ion-view view-title="demo">
+	<div class="bar bar-header bar-stable" id="nav">
+		<a class="button icon-left ion-ios-arrow-left button-clear button-dark" id="btn" href="#/tab/home"></a>
+	  <h1 class="title">京东登录</h1>
+	</div>
+  <ion-content id="list">
+    <div class="list list-inset" style="background-color: #f3f5f7;">
+		<label class="item item-input">
+			<input type="text" placeholder="用户名/邮箱/已验证手机">
+		</label>
+		<label class="item item-input">
+			<input type="text" placeholder="请输入密码">
+			
+			<label class="toggle toggle-assertive" id="tog">
+		       <input type="checkbox">
+		       <div class="track" placeholder="aaaaaaaaaaaa">
+		         <div class="handle"></div>
+		       </div>
+		    </label>
+		     
+		</label>
+		<label class="item item-input">
+			<input type="text" placeholder="请输入验证码">
+			<img class="img" src="img/1.jpg" />
+		</label>
+		<button class="button button-block button-stable" id="button">登&nbsp;陆</button>
+		<ion-checkbox ng-model="filter.red" id="che">一个月内免登录</ion-checkbox>
+		
+		<div class="row">
+		  <div class="col col-33"><i class="icon ion-ios-locked-outline"></i>&nbsp;&nbsp;找回密码</div>
+		  <div class="col col-33 col-offset-33"><i class="icon ion-android-phone-portrait"></i>&nbsp;&nbsp;快速注册</div>
+		</div>
+		<div class="box">
+			<h4>其他登录方式</h4>
+		</div>
+		
+		<div class="row" style="margin-top: 20px; text-align: center;">
+		  <div class="col col-50">
+		  	<img src="img/qq.jpg"/>
+		  	<p>QQ</p>
+		  </div>
+		  <div class="col col-50">
+		  	<img src="img/wx.jpg"/>
+		  	<p>微信</p>
+		  </div>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>

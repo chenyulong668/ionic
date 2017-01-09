@@ -1,0 +1,68 @@
+<ion-view view-title="分类">
+  <!--头部搜索栏-->
+  <header class="bar bar-header bar-light" id="headermin">
+    <div id="headerminBar-bg"></div>
+    <!--<div class="headerminBar-logo"></div>-->
+    <a class="button icon-left ion-ios-arrow-left button-clear button-dark" id="btn" href="#/tab/home"></a>
+    <div class="search">
+      <div class="search1">
+        <input type="text" name="" value="百草味满188减100">
+      </div>
+    </div>
+    <a href="#" class="lb">
+      <span></span>
+    </a>
+  </header>
+
+  <ion-content id="min-content" scroll="false">
+  <!--侧导航1-->
+  <!--<div class="jd-category-tab">
+     <div style="overflow: hidden;" id="category">
+       <ul id="ul1">
+          <li ng-repeat="item in navminSlideData"><a>{{item}}</a></li>
+        </ul>
+     </div>
+   </div>-->
+
+  <!--左侧导航-->
+  <nav id="navmin">
+    <ul id="ul1">
+      <li ng-repeat="items in navminSlideData" ng-click="specialClick(items.Id)"><a>{{items.name}}</a></li>
+    </ul>
+  </nav>
+
+  <!--左侧导航-->
+    <ion-content id="branchList">
+      <aside>
+        <div class="recommend-dt">
+          <a>
+            <img ng-src="{{headSrcData}}">
+          </a>
+        </div>
+        <div class="special">
+          <h4>{{headnameData}}</h4>
+          <ul class="ull">
+            <li ng-repeat="item in specialSlideData" ui-sref="sidenav({id:{{item.id}}})">
+              <a ng-href="">
+                <img ng-src="{{item.src}}"> 
+                <span>{{item.name}}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="special">
+          <h4>{{headnameData1}}</h4>
+          <ul class="ull">
+            <li ng-repeat="item in popularSlideData" ui-sref="sidenav({id:{{item.id}}})">
+              <a href="">
+                <img ng-src="{{item.src}}"> 
+                <span>{{item.name}}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </ion-content>
+
+  </ion-content>
+</ion-view>

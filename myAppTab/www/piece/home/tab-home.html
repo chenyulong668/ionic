@@ -1,0 +1,333 @@
+<ion-view view-title="首页">
+  <!--头部搜索栏-->
+  <div class="bar bar-header bar-light" id="header">
+    <div id="headerBar-bg"></div>
+    <div class="headerBar-logo"></div>
+    <div class="search">
+      <div class="search1">
+        <a href="#" class=""></a>
+        <input type="text" name="" value="美妆1元起 独家放价">
+      </div>
+    </div>
+    <a href="#" class="landing">
+      <span>登陆</span>
+    </a>
+  </div>
+
+  <ion-content  id="home-content" overflow-scroll="true">
+    
+    <!--头部轮播-->
+    <div class="headerSlider">
+      <div id="headerSlider" class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" ng-repeat="item in headerSlideData">
+            <img alt="{{item.alt}}" ng-src="{{item.src}}">
+          </div>
+        </div>
+        <div class="swiper-pagination" style="bottom: 3px;"></div>
+      </div>
+    </div>
+
+    <!--导航-->
+    <nav id="nav1">
+      <span>
+        <a href="#/tab/minute">
+          <img src="img/home/nav0.png">
+          <h2>分类查询</h2>
+        </a>
+      </span>
+      <span>
+        <img src="img/home/nav1.png">
+        <h2>物流查询</h2>
+      </span>
+      <span>
+        <img src="img/home/nav2.png">
+        <h2>购物车</h2>
+      </span>
+      <span>
+        <img src="img/home/nav3.png">
+        <h2>我的京东</h2>
+      </span>
+      <span>
+        <img src="img/home/nav4.png">
+        <h2>充值</h2>
+      </span>
+      <span>
+        <img src="img/home/nav5.png">
+        <h2>领券中心</h2>
+      </span>
+      <span>
+        <img src="img/home/nav6.png">
+        <h2>生活团购</h2>
+      </span>
+      <span>
+        <img src="img/home/nav7.png">
+        <h2>我的关注</h2>
+      </span>
+    </nav>
+
+    <!--京东头条-->
+    <div class="headlines">
+      <img src="img/home/home-toutiao.jpg">
+      <div class="swiper-container" id="headlinesSlider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">兰博丹尼 可爱零钱包 5555</div>
+            <div class="swiper-slide">桂格即食燕麦片超值装1478g</div>
+            <div class="swiper-slide">维达 卫生纸 140g卷纸*10卷</div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+    <!--京东秒杀-->
+    <div id="spike">
+      <div class="spikeHead">
+        <div class="spikeHead1">
+          <img src="img/home/jdmx.png" alt="">
+          <strong><em>8</em>点场</strong>
+          <div class="seckill-timer">
+            <div class="seckill-timer1">
+              <span>0</span><span>0</span>
+            </div>
+            <span >:</span>
+            <div  class="seckill-timer1">
+              <span>0</span><span>0</span>
+            </div>
+            <span>:</span>
+            <div  class="seckill-timer1">
+              <span>0</span><span>0</span>
+            </div>
+          </div>
+        </div>
+        <a class="mxhh" href="">秒杀好货迎新年 <i class="icon ion-android-arrow-dropright-circle"></i></a>
+      </div>
+
+      <div class="swiper-container" id="spikeCentral">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" ng-repeat="item1 in spikeCentralData">
+              <div>
+                <img ng-src="img/home/spike-{{item1.id}}.jpg" style="border-right: 1px solid #ccc;">
+                <span class="seckill-new-price"><em>￥</em>{{item1.xj}}</span>
+                <span class="seckill-original-price"><em>￥</em>{{item1.yj}}</span>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!--尖货放量疯抢-->
+    <div id="floor">
+      <img class="floor-bg" src="./img/home/floor.jpg" alt="">
+      <div class="floor-central floor-bott clear">
+        <a href="#" class="a1"></a>
+          <div class="floor-bott-left"><a href="#" style="width: 100%;height: 100%;"><img src="./img/home/floor-1.jpg" /></a></div>
+          <div class="floor-bott-right">
+            <a href="#"><img src="./img/home/floor-2.jpg" /></a>
+            <a href="#"><img src="./img/home/floor-3.jpg" /></a>
+          </div>
+      </div>
+    </div>
+
+    <div class="floorr padding">
+      <a class="floorr-left">
+        <div class="floorr-left-1">
+          <strong class="graphic-tit">排行榜</strong>
+          <p class="graphic-wz">精选实惠尖货</p>
+        </div>
+        <div class="floorr-left-1">
+          <img src="./img/home/floorr-1.jpg">
+        </div>
+      </a>
+      <a class="floorr-right">
+        <div class="floorr-left-1">
+          <strong class="graphic-tit">闪购</strong>
+          <p class="graphic-wz">必备保温杯</p>
+        </div>
+        <div class="floorr-left-1">
+          <img src="./img/home/floorr-2.jpg">
+        </div>
+      </a>
+    </div>
+
+    <div class="life">
+      <div class="life-tit">
+        <img class="life-tit-img" src="./img/home/life.png">
+        <span class="tit-img"><img src="./img/home/life-1.jpg"></span>
+      </div>
+      <div class="life-floor life-floor-b">
+        <a class="floorr-left">
+          <div class="floorr-left-1">
+            <strong class="graphic-tit">玩3C</strong>
+            <p class="graphic-wz">华为麦芒5</p>
+          </div>
+          <div class="floorr-left-1">
+            <img src="./img/home/floorr-3.jpg">
+          </div>
+        </a>
+        <a class="floorr-right">
+          <div class="floorr-left-1">
+            <strong class="graphic-tit">京东家电</strong>
+            <p class="graphic-wz">红包免费领</p>
+          </div>
+          <div class="floorr-left-1">
+            <img src="./img/home/floorr-4.jpg">
+          </div>
+        </a>
+      </div>
+
+      <div class="life-floor life-floor-b">
+        <a class="floorr-left">
+          <div class="floorr-left-1">
+            <strong class="graphic-tit">京东超市</strong>
+            <p class="graphic-wz">腊八好物1元抢</p>
+          </div>
+          <div class="floorr-left-1">
+            <img src="./img/home/floorr-5.jpg">
+          </div>
+        </a>
+        <a class="floorr-right">
+          <div class="floorr-left-1">
+            <strong class="graphic-tit">爱家</strong>
+            <p class="graphic-wz">好厨具包饺子</p>
+          </div>
+          <div class="floorr-left-1">
+            <img src="./img/home/floorr-6.jpg">
+          </div>
+        </a>
+      </div>
+
+      <div class="life-floor">
+        <div class="life-floor1 life-floor1-b">
+          <a>
+            <strong class="graphic-tit">爱宝宝</strong>
+            <p class="graphic-wz">爆款5折抢</p>
+            <img src="./img/home/floorr-7.jpg">
+          </a>
+        </div>
+        <div class="life-floor1 life-floor1-b">
+          <a>
+            <strong class="graphic-tit">爱美丽</strong>
+            <p class="graphic-wz">进口护肤大促</p>
+            <img src="./img/home/floorr-8.jpg">
+          </a>
+        </div>
+        <div class="life-floor1 life-floor1-b">
+          <a>
+            <strong class="graphic-tit">爱吃</strong>
+            <p class="graphic-wz">年货提前囤</p>
+            <img src="./img/home/floorr-9.jpg">
+          </a>
+        </div>
+        <div class="life-floor1">
+          <a>
+            <strong class="graphic-tit">爱逛</strong>
+            <p class="graphic-wz">跨店2件7折</p>
+            <img src="./img/home/floorr-10.jpg">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="quality">
+      <div id="qualitySlider" class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" ng-repeat="item in qualitySlideData">
+            <img alt="{{item.alt}}" ng-src="{{item.src}}">
+          </div>
+        </div>
+        <div class="swiper-pagination" style="bottom: 3px;"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="life-tit">
+        <img class="life-tit-img" src="./img/home/life.png">
+        <span class="tit-img"><img src="./img/home/life-2.jpg"></span>
+      </div>
+
+
+      <div class="life-floor life-floor-b">
+        <a class="floorr-left">
+          <div class="floorr-left-1">
+            <strong class="graphic-tit">全球尖货</strong>
+            <p class="graphic-wz">好货199-100</p>
+          </div>
+          <div class="floorr-left-1">
+            <img src="./img/home/floorr-11.jpg">
+          </div>
+        </a>
+        <a class="floorr-right">
+          <div class="floorr-left-1">
+            <strong class="graphic-tit">会员专享</strong>
+            <p class="graphic-wz">PLUS享特权</p>
+          </div>
+          <div class="floorr-left-1">
+            <img src="./img/home/floorr-12.jpg">
+          </div>
+        </a>
+      </div>
+
+      <div class="life-floor life-floor-b">
+        <a class="floorr-left">
+          <div class="floorr-left-1">
+            <strong class="graphic-tit">京东体育</strong>
+            <p class="graphic-wz">永久山地车</p>
+          </div>
+          <div class="floorr-left-1">
+            <img src="./img/home/floorr-13.jpg">
+          </div>
+        </a>
+        <a class="floorr-right">
+          <div class="floorr-left-1">
+            <strong class="graphic-tit">奢品大牌</strong>
+            <p class="graphic-wz">3件8折奢品好礼</p>
+          </div>
+          <div class="floorr-left-1">
+            <img src="./img/home/floorr-14.jpg">
+          </div>
+        </a>
+      </div>
+
+      <div class="life-floor">
+        <div class="life-floor1 life-floor1-b">
+          <a>
+            <strong class="graphic-tit">环球时尚</strong>
+            <p class="graphic-wz">大牌2折购</p>
+            <img src="./img/home/floorr-15.jpg">
+          </a>
+        </div>
+        <div class="life-floor1 life-floor1-b">
+          <a>
+            <strong class="graphic-tit">珠宝首饰</strong>
+            <p class="graphic-wz">珠宝3件8折</p>
+            <img src="./img/home/floorr-16.jpg">
+          </a>
+        </div>
+        <div class="life-floor1 life-floor1-b">
+          <a>
+            <strong class="graphic-tit">设计师</strong>
+            <p class="graphic-wz">潮流设计精选</p>
+            <img src="./img/home/floorr-17.jpg">
+          </a>
+        </div>
+        <div class="life-floor1">
+          <a>
+            <strong class="graphic-tit">达人精选</strong>
+            <p class="graphic-wz">时髦必败卫衣</p>
+            <img src="./img/home/floorr-18.jpg">
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+  </ion-content>
+  <div id="top">
+    <img src="./img/home/scroll-to-top-icon.png" alt="top">
+  </div>
+</ion-view>

@@ -1,0 +1,135 @@
+<ion-view view-title="商品详情">
+
+  <!--头部搜索栏-->
+  <header class="bar bar-header bar-light" id="headermin">
+    <div id="headerminBar-bg" style="border: none;"></div>
+    <!--<div class="headerminBar-logo"></div>-->
+    <a class="button icon-left ion-ios-arrow-left button-clear button-dark" id="btn" href="#/sidenav/"></a>
+    <div class="search" style="margin-top: 2px; text-align: center;">
+      商品详情
+      <!--<div class="search1">
+        <input type="text" name="" value="">
+      </div>-->
+    </div>
+    <a href="#" class="lb">
+      <span></span>
+    </a>
+  </header>
+
+
+  <ion-content id="detail-cnot" overflow-scroll="true">
+
+    <div id="detailSlider" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide detailName" ng-repeat="item in detailSlideData"><img ng-src="{{item.src}}" alt="{{item.alt}}"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiperyi">
+          <div class="swiper-pagination" id="swiper"></div>
+        </div>
+    </div>
+
+    <div class="goods-part">
+      <div class="prod-title">
+        <a href="">
+          <span class="title-text">
+            <img class="goods-sign" src="./img/minute/detail/detail-a.png" alt="">
+            鸭鸭冬装羽绒服女装韩版羽绒服女中长款斗篷轻薄羽绒服短款时尚衣服女士羽绒服长款 纯黑色+大毛领 160/84A 105斤-120斤适合</span>
+        </a>
+      </div>
+      <div class="prod-price-wrap">
+        <div class="prod-price">
+					<span class="yang-pic">¥</span>
+					<span class="yang-pic-price" id="jdPrice-copy">
+						<span class="big-price">398</span><span class="small-price">.00</span>
+					</span>
+			  </div>
+      </div>
+
+      <div class="prod-act">
+        时尚修身款鸭鸭正品大毛领款90%白鸭绒 赠运费险免邮
+        <a>
+        【快戳！商场同款直降5折 】款式升级！
+        </a>
+      </div>
+    </div>
+
+      <div class="goods-part mar-t">
+        <div class="prod-spec" id="natureID">
+					<div class="spec-desc">
+						<span class="part-note-msg">已选</span>
+						<div id="specDetailInfo" class="base-txt">
+							纯黑色+大毛领 160/84A 105斤-120斤适合 
+							&nbsp;&nbsp;<span class="amount">1件</span>
+						</div>
+            <em class="icon-arrow icon-arrow-down"></em>
+					</div>
+				</div>
+			</div>
+
+      <div class="goods-part mar-t">
+        <div class="send-to">
+          <span class="col01 part-note-msg">送至</span>
+          <div class="send_loc" id="btn-select-region">
+            <div class="address address01 J_ping">
+              <span id="provinceName">北京</span>
+              <span id="cityName">朝阳区</span>
+              <span id="countyName">管庄</span>
+              <span id="townName"></span> <i class="icon icon-location"></i>
+            </div>
+          </div>
+          <p class="stockStatus" id="stockStatus">
+            <span class="isExist">现货</span>
+          </p>
+        </div>
+        <div class="provide-srv" id="fare">
+					<span class="part-note-msg">运费</span>
+					<p class="base-txt">免运费</p>
+				</div>
+        <div class="provide-srv">
+           <span class="part-note-msg">服务</span>
+           <p class="base-txt">由企晨服饰专营店从浙江宁波市发货并提供售后服务</p>
+        </div>
+        <div class="msg-notice bdr-b borb">
+          <span class="part-note-msg">提示</span>
+          <p class="base-txt">
+            <span class="seven-back">支持7天无理由退货</span>
+					</p>
+        </div>
+      </div>
+
+
+    <div style="width: 100%; height: 52px;">
+    </div>
+
+
+  </ion-content>
+
+
+      <div id="cart1" class="cart-concern-btm-fixed five-column">
+        <div class="concern-cart">
+					<a class="dong-dong-icn J_ping" id="imBottom">	
+						<em class="btm-act-icn"></em>
+						<span class="focus-info">卖家</span>				   																				
+          </a>                                            
+					<a class="love-heart-icn J_ping" id="focusOn">
+    				<em class="btm-act-icn focus-out" id="attentionFocus"></em>
+    				<i class="focus-scale"></i>
+    				<span class="focus-info"> 关注  </span>
+        	</a>
+        	<a class="cart-car-icn J_ping" id="toCartNew" href="#">
+        	  <em class="btm-act-icn" id="shoppingCart">
+              <i class="order-numbers" id="carNum"></i>
+            </em>
+        		<span class="focus-info">购物车</span>
+        	</a>
+        </div>
+        <div class="action-list">
+    			<a class="yellow-color add_cart">加入购物车</a>
+          <a class="red-color directorder">立即购买</a>
+        </div>
+     </div>
+
+
+
+</ion-view>

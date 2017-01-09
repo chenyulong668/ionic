@@ -1,0 +1,49 @@
+/* Empty. Add your own CSS if you like */
+
+#nav{
+	padding-left: 10px;
+	background-color: #f9f9f9;
+	border-bottom: 1px solid #bbb;
+}
+#btn{
+	color: #949699;
+}
+#list{
+	background-color: #f3f5f7;
+	top: 30px;
+}
+.item{
+	margin-top: 20px !important;
+}
+#tog{
+	padding-right: 10px;
+}
+.img{
+	border-left: 1px solid #d7d7d7;
+}
+#button{
+	margin-top: 40px;
+}
+.button-stable{
+	background-color: #ccc;
+}
+#che{
+	margin: 0;
+	border: none;
+	background-color: #f3f5f7;
+}
+.col-offset-33{
+	text-align: right;
+}
+.box{
+	text-align: center;
+	border-bottom: 1px solid #d7d7d7;
+	margin-top: -20px;
+}
+.box h4{
+	display: inline-block;
+	padding: 0 10px;
+	position: relative;
+    bottom: -20px;
+    background-color: #f3f5f7;
+}

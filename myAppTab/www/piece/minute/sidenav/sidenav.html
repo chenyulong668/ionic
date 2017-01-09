@@ -1,0 +1,74 @@
+<ion-view view-title="分类子页">
+  <!--头部搜索栏-->
+  <header class="bar bar-header bar-light" id="headermin">
+    <div id="headerminBar-bg" style="border: none;"></div>
+    <!--<div class="headerminBar-logo"></div>-->
+    <a class="button icon-left ion-ios-arrow-left button-clear button-dark" id="btn" href="#/tab/minute"></a>
+    <div class="search">
+      <div class="search1">
+        <input type="text" name="" value="">
+      </div>
+    </div>
+    <a href="#" class="lb">
+      <span></span>
+    </a>
+  </header>
+
+  <nav id="sid-nav">
+    <div class="nav-all">综合</div>
+    <div class="nav-warp">
+      <ul>
+        <li>销量</li>
+        <li>价格</li>
+        <li>品牌</li>
+        <li>新品</li>
+        <li>服务</li>
+      </ul>
+    </div>
+  </nav>
+
+  <ion-content  id="sid-content">
+    <ion-refresher
+      pulling-text="获取最新数据..."
+      refreshing-text="刷新完毕"
+      on-refresh="func_refreshGoodsList()">
+    </ion-refresher>
+
+
+
+    <div id="pro-warp">
+      <ul class="ul2">
+
+        <li class="li1" ng-repeat="itema in obj_sidenavData">
+          <a ng-href="#/detail/{{itema.id}}">
+            <div class="pro-img">
+              <img ng-src="{{itema.src}}" alt="">
+            </div>
+            <div class="product-info-box">
+              <div class="product-name">
+                <span>{{itema.name}}</span>
+              </div>
+              <div class="gray-icon"></div>
+              <div class="product-price-m">
+                <em class="sid-em">¥<span class="big-price">{{itema.price}}</span><span class="small-price">.00</span></em>
+              </div>
+              <div class="gray-pro-info"><span class="span1">{{itema.comment}}条评价</span><span>好评{{itema.praise}}%</span></div>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+
+    <div ng-hide="pms_isMoreItemsAvailable" style="text-align: center">
+      <span>没有更多的数据！</span>
+    </div>
+    <ion-infinite-scroll ng-if="pms_isMoreItemsAvailable" on-infinite="func_loadMoreGoodsList()" distance="1%">
+    </ion-infinite-scroll>
+
+
+
+
+  </ion-content>
+</ion-view>
